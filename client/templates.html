@@ -1,0 +1,31 @@
+<head>
+  <title>pecord</title>
+</head>
+
+<template name="layout">
+  <div class="header">
+    <div class="container">
+      {{ > header }}
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="container">
+      {{ > yield }}
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      {{ > footer }}
+    </div>
+  </div>
+</template>
+
+<template name="header"></template>
+<template name="footer"></template>
+
+<template name="index">
+  <div class="slogan">
+    <div class="text">{{ _ 'slogan-text' }}</div>
+    <a href="/signup" class="signup-button">{{ _ 'slogan-button-text' }}</a>
+  </div>
+</template>
