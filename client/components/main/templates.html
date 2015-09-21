@@ -20,7 +20,20 @@
   </div>
 </template>
 
-<template name="header"></template>
+<template name="header">
+  <div class="left">
+    <a href="{{ pathFor route='Index' }}" class="logo">pecord</a>
+  </div>
+  <div class="right">
+    {{# if isAuthenticated }}
+      authed
+    {{ else }}
+      <div class="tip">{{ _ 'header-tip-text' }}</div>
+      <a href="/login" class="login-button">{{ _ 'login-button-text' }}</a>
+    {{/if}}
+  </div>
+</template>
+
 <template name="footer"></template>
 
 <template name="index">

@@ -10,3 +10,12 @@ insecure
 iron:router
 less
 tap:i18n
+accounts-base
+accounts-password
+dburles:collection-helpers
+copleykj:livestamp
+fortawesome:fontawesome
+reywood:publish-composite
+yasaricli:slugify
+aldeed:collection2
+aldeed:simple-schema
