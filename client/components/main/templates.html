@@ -29,7 +29,7 @@
       authed
     {{ else }}
       <div class="tip">{{ _ 'header-tip-text' }}</div>
-      <a href="/login" class="login-button">{{ _ 'login-button-text' }}</a>
+      <a href="{{ pathFor route='atSignIn' }}" class="login-button">{{ _ 'login-button-text' }}</a>
     {{/if}}
   </div>
 </template>
@@ -39,6 +39,6 @@
 <template name="index">
   <div class="slogan">
     <div class="text">{{ _ 'slogan-text' }}</div>
-    <a href="/signup" class="signup-button">{{ _ 'slogan-button-text' }}</a>
+    <a href="{{ pathFor route='atSignUp' }}" class="signup-button">{{ _ 'slogan-button-text' }}</a>
   </div>
 </template>

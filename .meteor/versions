@@ -64,6 +64,7 @@ routepolicy@1.0.5
 service-configuration@1.0.4
 session@1.1.0
 sha@1.0.3
+softwarerero:accounts-t9n@1.0.9
 spacebars@1.0.6
 spacebars-compiler@1.0.6
 srp@1.0.3
@@ -73,6 +74,9 @@ tracker@1.0.7
 ui@1.0.6
 underscore@1.0.3
 url@1.0.4
+useraccounts:core@1.12.3
+useraccounts:iron-routing@1.12.3
+useraccounts:unstyled@1.12.3
 webapp@1.2.0
 webapp-hashing@1.0.3
 yasaricli:slugify@0.0.7

@@ -19,3 +19,6 @@ reywood:publish-composite
 yasaricli:slugify
 aldeed:collection2
 aldeed:simple-schema
+useraccounts:core
+useraccounts:iron-routing
+useraccounts:unstyled
