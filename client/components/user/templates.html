@@ -1,3 +1,27 @@
-<template name="profile"></template>
+<template name="profile">
+  <div class="head">
+    <div class="avatar">
+      {{> avatar user=user }}
+    </div>
+    <div class="info">
+      <div class="statistics"></div>
+      <div class="name">
+        <a href="{{ pathFor route='Profile' username=user.username }}">
+          <span dir="ltr">{{ user.profile.fullname }}</span>
+        </a>
+        <span class="username">
+          <span dir="ltr">@{{ user.username }}</span>
+        </span>
+      </div>
+      <div class="bio">
+        <div class="description" dir="ltr">
+          <span dir="ltr">Developer at ‎@<a class="link-blue" target="_blank" rel="nofollow" href="/markafoni">markafoni</a>.</span>
+        </div>
+        <div class="website" dir="ltr">yasaricli.com</div>
+      </div>
+    </div>
+  </div>
+</template>
+
 <template name="friends"></template>
 <template name="settings"></template>

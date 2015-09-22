@@ -16,6 +16,14 @@ Router.configure({
   }
 });
 
+Avatar.setOptions({
+  gravatarDefault: "retro",
+  imageSizes: {
+    'big': 160,
+    'low-small': 24
+  }
+});
+
 Router.plugin('ensureSignedIn', {
   only: ['Wall', 'Questions', 'Friends', 'Search', 'Settings']
 });

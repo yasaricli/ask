@@ -6,14 +6,13 @@ body {
   font-family: Arial,Helvetica,sans-serif;
 }
 
-.clearfix() {
-  &:before,
+.clearfix {
+  *zoom: 1;
   &:after {
-    content: " "; // 1
-    display: table; // 2
-  }
-  &:after {
+    content: '';
+    display: block;
     clear: both;
+    height: 0;
   }
 }
 
@@ -63,7 +62,10 @@ body {
   background-position: top left;
 
   .container {
-    .left:extend(.clearfix all) {
+    &:extend(.clearfix all);
+
+    .left {
+      width:250px;
       float:left;
 
       .logo {
@@ -450,4 +452,90 @@ body {
   }
 
   .link-blue-underline()
+}
+
+#PecordProfile {
+
+  .wrapper {
+    .container {
+      width:100%;
+      padding:0px;
+    }
+  }
+
+  .avatar {
+    position: relative;
+    float: left;
+    width: 90px;
+    height: 90px;
+  }
+
+  .info {
+    float: right;
+    position: relative;
+    width: 570px;
+    min-height: 107px;
+    margin: 0;
+    padding: 0;
+
+    .name {
+      a {
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #000;
+
+        &:hover {
+          color: #3081a3;
+          text-decoration: underline;
+        }
+      }
+
+      .username {
+        display: inline;
+        font-weight: normal;
+        word-wrap: break-word;
+        color: #777;
+        line-height: 18px;
+        font-size: 16px;
+      }
+    }
+
+    .bio {
+      width: 310px;
+      margin: 0;
+      padding: 0;
+      float: left;
+      font-style: italic;
+      font-size: 12px;
+      word-wrap: break-word;
+
+      .description {
+        color: #777;
+      }
+
+      .website {
+
+      }
+    }
+
+    .statistics {}
+
+  }
+
+  .head {
+    &:extend(.clearfix all);
+
+    position: relative;
+    overflow: visible;
+    width: 685px;
+    height: auto;
+    margin: 0;
+    padding: 20px 25px 15px;
+    background-color: #f4f4f4;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    border-style: none;
+    border-bottom: 1px solid #EEE;
+  }
 }

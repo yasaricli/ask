@@ -3,7 +3,6 @@ accounts-password@1.1.2
 aldeed:autoform@5.5.1
 aldeed:collection2@2.5.0
 aldeed:simple-schema@1.3.3
-autopublish@1.0.4
 autoupdate@1.2.3
 babel-compiler@5.8.24
 babel-runtime@0.1.4
@@ -49,6 +48,9 @@ iron:location@1.0.9
 iron:middleware-stack@1.0.9
 iron:router@1.0.9
 iron:url@1.0.9
+jparker:crypto-core@0.1.0
+jparker:crypto-md5@0.1.1
+jparker:gravatar@0.3.1
 jquery@1.11.4
 launch-screen@1.0.3
 less@2.5.0_1
@@ -57,6 +59,7 @@ localstorage@1.0.4
 logging@1.0.8
 meteor@1.1.7
 meteor-base@1.0.1
+meteorhacks:inject-initial@1.0.2
 meteorspark:util@0.2.0
 minifiers@1.1.6
 minimongo@1.0.9
@@ -97,6 +100,7 @@ url@1.0.5
 useraccounts:core@1.12.3
 useraccounts:iron-routing@1.12.3
 useraccounts:unstyled@1.12.3
+utilities:avatar@0.9.1
 webapp@1.2.2
 webapp-hashing@1.0.4
 yasaricli:slugify@0.0.7
