@@ -23,30 +23,32 @@
 <template name="header">
   <div class="left">
     <a href="{{#if isAuthenticated }}{{ pathFor route='Wall' }}{{ else }}{{ pathFor route='Index' }}{{/if}}" class="logo">pecord</a>
-    <div class="header-features">
-      <a href="#">
-        <i class="fa fa-heart"></i>
-        <span>0</span>
-      </a>
-      <a href="{{ pathFor route='Questions' }}">
-        <i class="fa fa-question"></i>
-        <span>0</span>
-      </a>
-      <a href="#">
-        <i class="fa fa-reply"></i>
-        <span>0</span>
-      </a>
+    {{# if isAuthenticated }}
+      <div class="header-features">
+        <a href="#">
+          <i class="fa fa-heart"></i>
+          <span>0</span>
+        </a>
+        <a href="{{ pathFor route='Questions' }}">
+          <i class="fa fa-question"></i>
+          <span>0</span>
+        </a>
+        <a href="#">
+          <i class="fa fa-reply"></i>
+          <span>0</span>
+        </a>
     </div>
+    {{/if}}
   </div>
   <div class="right">
     {{# if isAuthenticated }}
       <div class="header-menu">
-        <a href="{{ pathFor route='Wall' }}">{{ _ 'menu-home-text' }}</a>
-        <a href="{{ pathFor route='Questions' }}">{{ _ 'menu-questions-text' }} <span>(1)</span></a>
-        <a href="{{ pathFor route='Profile' username=currentUser.username }}">{{ _ 'menu-profile-text' }}</a>
-        <a href="{{ pathFor route='Friends' }}">{{ _ 'menu-friends-text' }}</a>
-        <a href="{{ pathFor route='Search' }}">{{ _ 'menu-search-text' }}</a>
-        <a href="{{ pathFor route='Settings' }}">{{ _ 'menu-settings-text' }}</a>
+        <a href="{{ pathFor route='Wall' }}" class="{{ isActiveRoute 'Wall' }}">{{ _ 'menu-home-text' }}</a>
+        <a href="{{ pathFor route='Questions' }}" class="{{ isActiveRoute 'Questions' }}">{{ _ 'menu-questions-text' }} <span>(1)</span></a>
+        <a href="{{ pathFor route='Profile' username=currentUser.username }}" class="{{ isActiveRoute 'Profile' }}">{{ _ 'menu-profile-text' }}</a>
+        <a href="{{ pathFor route='Friends' }}" class="{{ isActiveRoute 'Friends' }}">{{ _ 'menu-friends-text' }}</a>
+        <a href="{{ pathFor route='Search' }}" class="{{ isActiveRoute 'Search' }}">{{ _ 'menu-search-text' }}</a>
+        <a href="{{ pathFor route='Settings' }}" class="{{ isActiveRoute 'Settings' }}">{{ _ 'menu-settings-text' }}</a>
         <a href="#" class="logout">
           <i class="fa fa-sign-out"></i>
         </a>

@@ -100,3 +100,4 @@ useraccounts:unstyled@1.12.3
 webapp@1.2.2
 webapp-hashing@1.0.4
 yasaricli:slugify@0.0.7
+zimme:active-route@2.3.2
