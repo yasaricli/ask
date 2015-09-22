@@ -33,6 +33,9 @@
         <a href="{{ pathFor route='Friends' }}">{{ _ 'menu-friends-text' }}</a>
         <a href="{{ pathFor route='Search' }}">{{ _ 'menu-search-text' }}</a>
         <a href="{{ pathFor route='Settings' }}">{{ _ 'menu-settings-text' }}</a>
+        <a href="#" class="logout">
+          <i class="fa fa-sign-out"></i>
+        </a>
       </div>
     {{ else }}
       <div class="tip">{{ _ 'header-tip-text' }}</div>
@@ -49,3 +52,7 @@
     <a href="{{ pathFor route='atSignUp' }}" class="signup-button">{{ _ 'slogan-button-text' }}</a>
   </div>
 </template>
+
+
+<template name="loading"></template>
+<template name="notFound"></template>
