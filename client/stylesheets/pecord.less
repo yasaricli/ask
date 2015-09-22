@@ -514,9 +514,7 @@ body {
         color: #777;
       }
 
-      .website {
-
-      }
+      .website { }
     }
 
     .statistics {
@@ -562,6 +560,39 @@ body {
         float: right;
         border-style: none;
         border-left: 1px solid #dfdfdf;
+      }
+    }
+
+    .buttons {
+      padding: 13px 0 0;
+      zoom: 1;
+      clear: right;
+      float: right;
+
+      a {
+        display: block;
+        float: right;
+        height: 28px;
+        width: 28px;
+        cursor: pointer;
+        border: 1px solid #e2e2e2;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        zoom:1;
+        background-color: #FFF;
+
+        .fa-pencil {
+          font-size: 18px;
+          margin: 5px 0 0 7px;
+          color:#CBCBCB;
+        }
+
+        &:hover {
+          .fa-pencil {
+            color: #2B93C5;
+          }
+        }
       }
     }
   }

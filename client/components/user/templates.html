@@ -33,6 +33,15 @@
           <div class="website" dir="ltr">{{ user.website }}</div>
         {{/if}}
       </div>
+      <div class="buttons">
+        {{# if isCurrentUser user }}
+          <a href="{{ pathFor route='Settings' }}">
+            <i class="fa fa-pencil"></i>
+          </a>
+        {{ else }}
+        
+        {{/if}}
+      </div>
     </div>
   </div>
 </template>

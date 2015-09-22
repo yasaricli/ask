@@ -2,18 +2,17 @@
   "slogan-text": "Sor ve yanıtla",
   "slogan-button-text": "ŞİMDİ KATIL!",
   "header-tip-text": "Hesabın varmı?",
-  "login-button-text": "Giriş",
 
-  "menu-home-text": "Ana Sayfa",
-  "menu-questions-text": "Sorular",
-  "menu-profile-text": "Profil",
-  "menu-friends-text": "Arkadaşlar",
-  "menu-search-text": "Ara",
-  "menu-settings-text": "Ayarlar",
+  "login": "Giriş",
+  "home": "Ana Sayfa",
+  "questions": "Sorular",
+  "profile": "Profil",
+  "friends": "Arkadaşlar",
+  "search": "Ara",
+  "settings": "Ayarlar",
+  "answers": "Yanıtlar",
+  "likes": "Beğenenler",
 
   "page-notfound-text": "Requested page was not found.",
-  "page-notfound-link-text": "Return to main page",
-
-  "answers": "Yanıtlar",
-  "likes": "Beğenenler"
+  "page-notfound-link-text": "Return to main page"
 }

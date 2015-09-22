@@ -2,18 +2,17 @@
   "slogan-text": "Ask and Answer",
   "slogan-button-text": "JOIN NOW!",
   "header-tip-text": "Have an account?",
-  "login-button-text": "Log in",
 
-  "menu-home-text": "Home",
-  "menu-questions-text": "Questions",
-  "menu-profile-text": "Profile",
-  "menu-friends-text": "Friends",
-  "menu-search-text": "Search",
-  "menu-settings-text": "Settings",
+  "login": "Log in",
+  "home": "Home",
+  "questions": "Questions",
+  "profile": "Profile",
+  "friends": "Friends",
+  "search": "Search",
+  "settings": "Settings",
+  "answers": "Answers",
+  "likes": "Likes",
 
   "page-notfound-text": "Requested page was not found.",
-  "page-notfound-link-text": "Return to main page",
-
-  "answers": "Answers",
-  "likes": "Likes"
+  "page-notfound-link-text": "Return to main page"
 }
