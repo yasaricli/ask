@@ -1,11 +1,11 @@
-var pwd = AccountsTemplates.removeField('password');
+const pwd = AccountsTemplates.removeField('password');
 
 Router.configure({
   layoutTemplate: 'layout',
   loadingTemplate: 'loading',
 
-  onBeforeAction: function() {
-    var body = $('body');
+  onBeforeAction() {
+    const body = $('body');
 
     // add class
     body.attr('id', 'Pecord' + this.route.getName());

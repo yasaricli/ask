@@ -1,6 +1,6 @@
-Tracker.autorun(function() {
-  var language = 'en';
+Tracker.autorun(() => {
+  let language = 'en';
 
-  // XXX DEFAULT LANGUAGE SET SELECTION
+  // set language
   TAPi18n.setLanguage(language);
 });
