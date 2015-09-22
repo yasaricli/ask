@@ -3,6 +3,7 @@ const pwd = AccountsTemplates.removeField('password');
 Router.configure({
   layoutTemplate: 'layout',
   loadingTemplate: 'loading',
+  notFoundTemplate: 'notFound',
 
   onBeforeAction() {
     const body = $('body');
@@ -21,7 +22,7 @@ Router.plugin('ensureSignedIn', {
 
 AccountsTemplates.configure({
   enablePasswordChange: true,
-  homeRoutePath: '/',
+  homeRoutePath: '/wall', // user is authenticated then home page.
   showPlaceholders: false,
   focusFirstInput: false,
 

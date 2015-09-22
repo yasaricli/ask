@@ -28,6 +28,18 @@ body {
   }
 }
 
+.link-blue-underline {
+  a {
+    color: #3081a3;
+    text-decoration: underline;
+
+    &:hover {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+}
+
 .container {
   display: block;
   overflow: hidden;
@@ -425,4 +437,17 @@ body {
       text-decoration: none;
     }
   }
+}
+
+#NotFound {
+  margin:60px auto 10px;
+  text-align:center;
+
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .link-blue-underline()
 }

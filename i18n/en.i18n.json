@@ -9,5 +9,8 @@
   "menu-profile-text": "Profile",
   "menu-friends-text": "Friends",
   "menu-search-text": "Search",
-  "menu-settings-text": "Settings"
+  "menu-settings-text": "Settings",
+
+  "page-notfound-text": "Requested page was not found.",
+  "page-notfound-link-text": "Return to main page"
 }

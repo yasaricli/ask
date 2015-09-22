@@ -37,7 +37,7 @@
           <i class="fa fa-reply"></i>
           <span>0</span>
         </a>
-    </div>
+      </div>
     {{/if}}
   </div>
   <div class="right">
@@ -71,4 +71,9 @@
 
 
 <template name="loading"></template>
-<template name="notFound"></template>
+<template name="notFound">
+  <div id="NotFound">
+    <p>{{ _ 'page-notfound-text' }}</p>
+    <a href="{{ pathFor route='Index' }}">{{ _ 'page-notfound-link-text' }}</a>
+  </div>
+</template>

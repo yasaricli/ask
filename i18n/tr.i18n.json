@@ -9,5 +9,8 @@
   "menu-profile-text": "Profil",
   "menu-friends-text": "Arkadaşlar",
   "menu-search-text": "Ara",
-  "menu-settings-text": "Ayarlar"
+  "menu-settings-text": "Ayarlar",
+
+  "page-notfound-text": "Requested page was not found.",
+  "page-notfound-link-text": "Return to main page"
 }
