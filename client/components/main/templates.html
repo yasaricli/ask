@@ -23,6 +23,20 @@
 <template name="header">
   <div class="left">
     <a href="{{#if isAuthenticated }}{{ pathFor route='Wall' }}{{ else }}{{ pathFor route='Index' }}{{/if}}" class="logo">pecord</a>
+    <div class="header-features">
+      <a href="#">
+        <i class="fa fa-heart"></i>
+        <span>0</span>
+      </a>
+      <a href="{{ pathFor route='Questions' }}">
+        <i class="fa fa-question"></i>
+        <span>0</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-reply"></i>
+        <span>0</span>
+      </a>
+    </div>
   </div>
   <div class="right">
     {{# if isAuthenticated }}
