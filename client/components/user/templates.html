@@ -14,10 +14,14 @@
         </span>
       </div>
       <div class="bio">
-        <div class="description" dir="ltr">
-          <span dir="ltr">Developer at ‎@<a class="link-blue" target="_blank" rel="nofollow" href="/markafoni">markafoni</a>.</span>
-        </div>
-        <div class="website" dir="ltr">yasaricli.com</div>
+        {{# if user.bio }}
+          <div class="description" dir="ltr">
+            <span dir="ltr">{{ user.bio }}</span>
+          </div>
+        {{/if}}
+        {{# if user.website }}
+          <div class="website" dir="ltr">{{ user.website }}</div>
+        {{/if}}
       </div>
     </div>
   </div>
