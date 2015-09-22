@@ -4,7 +4,17 @@
       {{> avatar user=user }}
     </div>
     <div class="info">
-      <div class="statistics"></div>
+      <div class="statistics">
+        <a href="{{ pathFor route='Profile' username=user.username }}">
+          <span class="digit">0</span>
+          <span class="label">{{ _ 'answers' }}</span>
+        </a>
+        <div class="seperator"></div>
+        <a href="{{ pathFor route='Profile' username=user.username }}">
+          <span class="digit">0</span>
+          <span class="label">{{ _ 'likes' }}</span>
+        </a>
+      </div>
       <div class="name">
         <a href="{{ pathFor route='Profile' username=user.username }}">
           <span dir="ltr">{{ user.profile.fullname }}</span>

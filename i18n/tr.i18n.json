@@ -12,5 +12,8 @@
   "menu-settings-text": "Ayarlar",
 
   "page-notfound-text": "Requested page was not found.",
-  "page-notfound-link-text": "Return to main page"
+  "page-notfound-link-text": "Return to main page",
+
+  "answers": "Yanıtlar",
+  "likes": "Beğenenler"
 }

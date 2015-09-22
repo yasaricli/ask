@@ -12,5 +12,8 @@
   "menu-settings-text": "Settings",
 
   "page-notfound-text": "Requested page was not found.",
-  "page-notfound-link-text": "Return to main page"
+  "page-notfound-link-text": "Return to main page",
+
+  "answers": "Answers",
+  "likes": "Likes"
 }
