@@ -2,5 +2,12 @@
   "slogan-text": "Ask and Answer",
   "slogan-button-text": "JOIN NOW!",
   "header-tip-text": "Have an account?",
-  "login-button-text": "Log in"
+  "login-button-text": "Log in",
+
+  "menu-home-text": "Home",
+  "menu-questions-text": "Questions",
+  "menu-profile-text": "Profile",
+  "menu-friends-text": "Friends",
+  "menu-search-text": "Search",
+  "menu-settings-text": "Settings"
 }

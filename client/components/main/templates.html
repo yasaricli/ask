@@ -27,12 +27,12 @@
   <div class="right">
     {{# if isAuthenticated }}
       <div class="header-menu">
-        <a href="{{ pathFor route='Wall' }}">Home</a>
-        <a href="{{ pathFor route='Questions' }}">Questions <span>(1)</span></a>
-        <a href="{{ pathFor route='Profile' username=currentUser.username }}">Profile</a>
-        <a href="{{ pathFor route='Friends' }}">Friends</a>
-        <a href="{{ pathFor route='Search' }}">Search</a>
-        <a href="{{ pathFor route='Settings' }}">Settings</a>
+        <a href="{{ pathFor route='Wall' }}">{{ _ 'menu-home-text' }}</a>
+        <a href="{{ pathFor route='Questions' }}">{{ _ 'menu-questions-text' }} <span>(1)</span></a>
+        <a href="{{ pathFor route='Profile' username=currentUser.username }}">{{ _ 'menu-profile-text' }}</a>
+        <a href="{{ pathFor route='Friends' }}">{{ _ 'menu-friends-text' }}</a>
+        <a href="{{ pathFor route='Search' }}">{{ _ 'menu-search-text' }}</a>
+        <a href="{{ pathFor route='Settings' }}">{{ _ 'menu-settings-text' }}</a>
       </div>
     {{ else }}
       <div class="tip">{{ _ 'header-tip-text' }}</div>
