@@ -86,6 +86,29 @@ body {
         color: #83bbd6;
       }
     }
+
+    .header-menu {
+      margin: -6px 0 0 0;
+
+      a {
+        display: block;
+        font-size: 12px;
+        line-height: 14px;
+        margin: 0;
+        padding: 13px 6px;
+        text-align: center;
+        text-decoration: none;
+        color: #83bbd6;
+        background-color: transparent;
+        float: left;
+        white-space: nowrap;
+        outline: 0 none;
+
+        &:hover {
+          color: #FFF;
+        }
+      }
+    }
   }
 }
 
@@ -183,7 +206,13 @@ body {
 }
 
 #PecordatSignIn,
-#PecordatSignUp {
+#PecordatSignUp,
+#PecordWall,
+#PecordQuestions,
+#PecordProfile,
+#PecordSettings,
+#PecordFriends,
+#PecordSearch {
   #Surface();
 
   .wrapper {
@@ -249,6 +278,21 @@ body {
       -webkit-border-radius: 5px;
       outline: none;
     }
+
+    select {
+      display: inline;
+      width: 300px;
+      margin: 0;
+      padding: 7px 5px;
+      border: solid 1px #abadb3;
+      color: #000;
+      font-size: 14px;
+      text-align: left;
+      font-family: Arial,Helvetica,sans-serif;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px
+    }
   }
 
   p {
@@ -258,7 +302,7 @@ body {
     font-size: 11px;
     line-height: 14px;
     color: gray;
-    margin: 2px 0 0;
+    margin: 10px 0 0;
     padding: 0;
     cursor: default;
     overflow: hidden;
@@ -308,6 +352,16 @@ body {
 
     &:hover {
       background-position: center -40px;
+    }
+  }
+
+  a {
+    color: #3081a3;
+    text-decoration: underline;
+
+    &:hover {
+      color: #000;
+      text-decoration: none;
     }
   }
 }

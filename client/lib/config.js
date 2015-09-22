@@ -15,10 +15,15 @@ Router.configure({
   }
 });
 
+Router.plugin('ensureSignedIn', {
+  only: ['Wall', 'Questions', 'Friends', 'Search', 'Settings']
+});
+
 AccountsTemplates.configure({
   enablePasswordChange: true,
   homeRoutePath: '/',
   showPlaceholders: false,
+  focusFirstInput: false,
 
   negativeValidation: true,
   positiveValidation: true,
@@ -51,7 +56,24 @@ AccountsTemplates.addFields([
       required: true,
       displayName: "email",
       re: /.+@(.+){2,}\.(.+){2,}/,
-      errStr: 'Invalid email',
+      errStr: 'Invalid email'
   },
-  pwd
+  pwd,
+
+  {
+    _id: "gender",
+    type: "select",
+    displayName: "Gender",
+    required: true,
+    select: [
+        {
+            text: "Male",
+            value: "male"
+        },
+        {
+            text: "Female",
+            value: "female"
+        },
+    ],
+  },
 ]);

@@ -22,3 +22,4 @@ aldeed:simple-schema
 useraccounts:core
 useraccounts:iron-routing
 useraccounts:unstyled
+aldeed:autoform

@@ -22,11 +22,18 @@
 
 <template name="header">
   <div class="left">
-    <a href="{{ pathFor route='Index' }}" class="logo">pecord</a>
+    <a href="{{#if isAuthenticated }}{{ pathFor route='Wall' }}{{ else }}{{ pathFor route='Index' }}{{/if}}" class="logo">pecord</a>
   </div>
   <div class="right">
     {{# if isAuthenticated }}
-      authed
+      <div class="header-menu">
+        <a href="{{ pathFor route='Wall' }}">Home</a>
+        <a href="{{ pathFor route='Questions' }}">Questions <span>(1)</span></a>
+        <a href="{{ pathFor route='Profile' username=currentUser.username }}">Profile</a>
+        <a href="{{ pathFor route='Friends' }}">Friends</a>
+        <a href="{{ pathFor route='Search' }}">Search</a>
+        <a href="{{ pathFor route='Settings' }}">Settings</a>
+      </div>
     {{ else }}
       <div class="tip">{{ _ 'header-tip-text' }}</div>
       <a href="{{ pathFor route='atSignIn' }}" class="login-button">{{ _ 'login-button-text' }}</a>
