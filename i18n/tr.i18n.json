@@ -12,7 +12,17 @@
   "settings": "Ayarlar",
   "answers": "Yanıtlar",
   "likes": "Beğenenler",
+  "follow": "Takip Et",
+
+  "username": "Kullanıcı adı",
+  "fullname": "Ad, Soyad",
+  "email": "E-posta",
+  "website": "Web sitesi",
+  "bio": "Hakkımda",
+  "password": "Password",
+  "change-password": "Change Password",
 
   "page-notfound-text": "Requested page was not found.",
-  "page-notfound-link-text": "Return to main page"
+  "page-notfound-link-text": "Return to main page",
+  "settings-updated-message": "Profilin güncellendi"
 }

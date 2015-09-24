@@ -24,13 +24,19 @@
         </span>
       </div>
       <div class="bio">
-        {{# if user.bio }}
+        {{# if user.profile.bio }}
           <div class="description" dir="ltr">
-            <span dir="ltr">{{ user.bio }}</span>
+            <span dir="ltr">
+              {{ user.profile.bio }}
+            </span>
           </div>
         {{/if}}
-        {{# if user.website }}
-          <div class="website" dir="ltr">{{ user.website }}</div>
+        {{# if user.profile.website }}
+          <div class="website">
+            <a href="{{ user.profile.website }}" target="_blank">
+              {{ user.profile.website }}
+            </a>
+          </div>
         {{/if}}
       </div>
       <div class="buttons">
@@ -39,12 +45,35 @@
             <i class="fa fa-pencil"></i>
           </a>
         {{ else }}
-        
+          <button class="btn green">{{ _ 'follow' }}</button>
         {{/if}}
       </div>
     </div>
   </div>
 </template>
 
+<template name="settings">
+  <div class="head-label">Settings</div>
+  {{# if session 'settingsOnSaved' }}
+    <div class="head-success">
+      <i class="fa fa-check-circle"></i> {{ session 'settingsOnSaved' }}
+    </div>
+  {{/if}}
+  {{# autoForm schema=form id="settingsForm" }}
+    {{> afQuickField name="username" value=currentUser.username }}
+    {{> afQuickField name="email" value=currentUser.emails.[0].address }}
+    {{> afQuickField name="fullname" value=currentUser.profile.fullname }}
+    {{> afQuickField name="website" value=currentUser.profile.website }}
+    {{> afQuickField name="bio" value=currentUser.profile.bio }}
+    {{> afQuickField name="language" value=currentUser.profile.language }}
+    <div class="form-group">
+      <label class="control-label">{{ _ 'password' }}</label>
+      <a href="{{ pathFor 'atChangePwd' }}">{{ _ 'change-password' }}</a>
+    </div>
+    <div class="buttons">
+      <button class="btn blue">Save</button>
+    </div>
+  {{/autoForm}}
+</template>
+
 <template name="friends"></template>
-<template name="settings"></template>

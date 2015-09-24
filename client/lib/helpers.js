@@ -8,8 +8,13 @@ let HELPERS = {
 
     // return Boolean True or False
     return _.isEqual(currentUser._id, user._id);
+  },
+
+  session(key) {
+    return Session.get(key);
   }
 };
+
 
 // REGISTER HELPERS
 _.each(HELPERS, (fn, name) => {

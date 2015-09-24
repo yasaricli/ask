@@ -12,7 +12,18 @@
   "settings": "Settings",
   "answers": "Answers",
   "likes": "Likes",
+  "follow": "Follow",
+
+  "username": "Username",
+  "fullname": "Full Name",
+  "email": "Email",
+  "website": "Website",
+  "bio": "Bio",
+  "password": "Password",
+  "change-password": "Change Password",
+
 
   "page-notfound-text": "Requested page was not found.",
-  "page-notfound-link-text": "Return to main page"
+  "page-notfound-link-text": "Return to main page",
+  "settings-updated-message": "Your profile has been updated"
 }

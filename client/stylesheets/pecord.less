@@ -262,6 +262,33 @@ body {
       margin: 0;
       padding: 12px 25px 15px;
       overflow: hidden;
+
+      .head-label {
+        display: block;
+        width: 685px;
+        margin: 0 auto 15px;
+        padding: 0 0 10px;
+        border-style: none;
+        border-bottom: 1px solid #EEE;
+        overflow: hidden;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+      }
+
+      .head-success {
+        height: 18px;
+        padding: 0 0 15px 28px;
+        margin: 0;
+        font-weight: bold;
+        line-height: 18px;
+        color: #94cf01;
+
+        .fa-check-circle {
+          font-size:20px;
+        }
+      }
     }
   }
 
@@ -287,7 +314,8 @@ body {
 #PecordProfile,
 #PecordSettings,
 #PecordFriends,
-#PecordSearch {
+#PecordSearch,
+#PecordatChangePwd {
   #Surface();
 
   .wrapper {
@@ -317,7 +345,7 @@ body {
     }
   }
 
-  .at-input {
+  .at-input, .form-group {
     position:relative;
     overflow: hidden;
     width: 342px;
@@ -326,6 +354,10 @@ body {
     height: auto;
     margin: 0;
     padding: 0 0 14px;
+
+    * {
+      outline: none;
+    }
 
     label {
       display: block;
@@ -352,6 +384,11 @@ body {
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
       outline: none;
+
+      &[disabled] {
+        color:#ccc;
+        border-color: #ccc;
+      }
     }
 
     select {
@@ -367,6 +404,27 @@ body {
       border-radius: 5px;
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px
+    }
+
+    textarea {
+      display: inline;
+      width: 288px;
+      max-width: 288px;
+      min-width: 288px;
+      height: 36px;
+      margin: 0;
+      padding: 8px 5px;
+      border: solid 1px #abadb3;
+      color: #000;
+      font-size: 14px;
+      text-align: left;
+      font-family: Arial,Helvetica,sans-serif;
+      line-height: 18px;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      overflow: hidden;
+      resize:none;
     }
   }
 
@@ -438,6 +496,14 @@ body {
       color: #000;
       text-decoration: none;
     }
+  }
+
+  .buttons {
+    display: block;
+    width: 100%;
+    margin: 7px auto 10px;
+    padding: 0;
+    overflow: hidden;
   }
 }
 
@@ -514,7 +580,11 @@ body {
         color: #777;
       }
 
-      .website { }
+      .website {
+        a {
+          &:extend(.link-blue all);
+        }
+      }
     }
 
     .statistics {
@@ -612,4 +682,9 @@ body {
     border-style: none;
     border-bottom: 1px solid #EEE;
   }
+}
+
+
+#settingsForm {
+  &:extend(.at-form all);
 }
