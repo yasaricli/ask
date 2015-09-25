@@ -1,8 +1,6 @@
 <template name="profile">
   <div class="head">
-    <div class="avatar">
-      {{> avatar user=user }}
-    </div>
+    {{> avatar user=user }}
     <div class="info">
       <div class="statistics">
         <a href="{{ pathFor route='Profile' username=user.username }}">
@@ -18,6 +16,7 @@
       <div class="name">
         <a href="{{ pathFor route='Profile' username=user.username }}">
           <span dir="ltr">{{ user.profile.fullname }}</span>
+          <div class="{{# if user.status.online }}online{{ else }}offline{{/if}}"></div>
         </a>
         <span class="username">
           <span dir="ltr">@{{ user.username }}</span>

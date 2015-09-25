@@ -64,6 +64,23 @@ body {
   padding: 0px 0 6px;
 }
 
+
+.online {
+  width:10px;
+  height:10px;
+  border-radius:50px;
+  position:absolute;
+  background-color:#0F9D28;
+  left: -12px;
+  top: 5px;
+}
+
+.offline {
+  .online();
+
+  background-color:#CACACA;
+}
+
 .container {
   display: block;
   overflow: hidden;
@@ -561,6 +578,7 @@ body {
 
   .avatar {
     position: relative;
+    z-index:1;
     float: left;
     width: 90px;
     height: 90px;
@@ -576,6 +594,7 @@ body {
 
     .name {
       a {
+        position:relative;
         font-size: 16px;
         text-decoration: none;
         font-weight: bold;
