@@ -52,15 +52,16 @@
   </div>
   <div class="profile-askme">
     {{# if isAuthenticated }}
-      <div class="label">
-        {{# if user.profile.askme }}
-          {{ user.profile.askme }}
-        {{ else }}
-          {{ _ 'ask-me' }}
-        {{/if}}
-      </div>
-
-      {{ > askMeForm type="ask" }}
+      {{# unless session 'onCreatedQuestion' }}
+        <div class="label">
+          {{# if user.profile.askme }}
+            {{ user.profile.askme }}
+          {{ else }}
+            {{ _ 'ask-me' }}
+          {{/if}}
+        </div>
+      {{/unless}}
+      {{ > askMeForm type="ask" user=user }}
     {{/if}}
     <div class="answers">
       <div class="label">

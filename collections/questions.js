@@ -25,7 +25,12 @@ Questions.attachSchema(new SimpleSchema({
   },
 
   answered: {
-    type: Boolean
+    type: Boolean,
+    autoValue() {
+      if (this.isInsert) {
+        return false
+      }
+    }
   },
 
   createdAt: {
