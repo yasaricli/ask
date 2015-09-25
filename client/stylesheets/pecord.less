@@ -688,3 +688,82 @@ body {
 #settingsForm {
   &:extend(.at-form all);
 }
+
+
+.profile-askme {
+  display: block;
+  width: 685px;
+  min-height: 290px;
+  margin: 0;
+  padding: 12px 25px 15px;
+  overflow: hidden;
+
+  .label {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .answers {
+    display: block;
+    width: 685px;
+    margin: 0 auto;
+    padding: 11px 0;
+    border-style: none;
+    border-bottom: 1px solid #EEE;
+    overflow: hidden;
+  }
+
+  #AskMeForm {
+    textarea {
+      width: 673px;
+      max-width: 673px;
+      padding: 5px;
+      border: solid 1px #CCC;
+      margin-top:5px;
+      font-family: Arial,Helvetica,sans-serif;
+      font-size: 14px;
+      text-align: left;
+      line-height: 18px;
+      color: #000;
+      overflow: auto;
+      -moz-border-radius: 5px 5px 0 0;
+      border-radius: 5px 5px 0 0;
+      outline: 0;
+      resize:none;
+    }
+
+    .ask-options {
+      &:extend(.clearfix all);
+
+      overflow: hidden;
+      width: 675px;
+      padding: 4px;
+      margin-top: -3px;
+      border-top: 0;
+      border-bottom: solid 1px #CCC;
+      border-left: solid 1px #CCC;
+      border-right: solid 1px #CCC;
+      -moz-border-radius: 0 0 5px 5px;
+      -webkit-border-radius: 0 0 5px 5px;
+      border-radius: 0 0 5px 5px;
+      background-color: #EEE;
+
+      .counter {
+        width: auto;
+        height: 26px;
+        display: block;
+        float: left;
+        color: #999;
+        margin: 0;
+        padding: 0 0 0 5px;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+      }
+
+      button {
+        float:right;
+      }
+    }
+  }
+}

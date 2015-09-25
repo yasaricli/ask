@@ -18,6 +18,7 @@ callback-hook@1.0.4
 cfs:http-methods@0.0.30
 check@1.0.6
 coffeescript@1.0.9
+copleykj:jquery-autosize@1.17.8
 copleykj:livestamp@1.1.7
 dburles:collection-helpers@1.0.3
 ddp@1.2.2

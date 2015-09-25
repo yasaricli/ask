@@ -19,11 +19,13 @@
   "email": "Email",
   "website": "Website",
   "bio": "Bio",
+  "ask": "Ask",
   "password": "Password",
   "change-password": "Change Password",
 
 
   "page-notfound-text": "Requested page was not found.",
   "page-notfound-link-text": "Return to main page",
-  "settings-updated-message": "Your profile has been updated"
+  "settings-updated-message": "Your profile has been updated",
+  "ask-me": "Ask me a question"
 }

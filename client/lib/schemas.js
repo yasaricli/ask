@@ -1,21 +1,5 @@
 const root = this;
 
-// LANGUAGE LIST
-root.LANGUAGES = [
-
-  // English
-  {
-    label: 'English',
-    value: 'en'
-  },
-
-  // TURKISH
-  {
-    label: 'Türkçe',
-    value: 'tr'
-  }
-];
-
 root.SCHEMAS = {
   settings: new SimpleSchema({
     username: {
@@ -30,6 +14,7 @@ root.SCHEMAS = {
       type: String,
       label: 'Email',
       optional: true,
+      regEx: SimpleSchema.RegEx.Url,
       autoform: {
         disabled: true
       }
@@ -51,6 +36,16 @@ root.SCHEMAS = {
       optional: true,
       autoform: {
         type: 'textarea'
+      }
+    },
+    gender: {
+      type: String,
+      label: 'Gender',
+      autoform: {
+        type: 'select',
+        options() {
+          return GENDERS;
+        }
       }
     },
     language: {
