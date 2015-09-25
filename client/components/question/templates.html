@@ -1,6 +1,6 @@
 <template name="questions">
   <div class="head-label mb0">{{ _ 'questions' }}</div>
-  {{ > list doc=currentUser.questions }}
+  {{ > list doc=currentUser.questions emptyBox=true }}
 </template>
 
 <template name="list">
@@ -19,7 +19,14 @@
         {{/if}}
       </li>
     {{ else }}
-      <li class="yet">{{ _ 'answer-yet' }}</li>
+      {{# if emptyBox }}
+        <li class="box">
+          <div class="link">{{ currentUser.absoluteUrl }}</div>
+          <div>{{ _ 'questions-yet' }}</div>
+        </li>
+      {{ else }}
+        <li class="yet">{{ _ 'answer-yet' }}</li>
+      {{/if}}
     {{/each}}
   </ul>
 </template>

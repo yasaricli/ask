@@ -12,5 +12,9 @@ Users.helpers({
       answerUserId: this._id,
       answered: false
     });
+  },
+
+  absoluteUrl() {
+    return Meteor.absoluteUrl('~' + this.username);
   }
 });

@@ -41,12 +41,9 @@ Questions.attachSchema(new SimpleSchema({
         return new Date();
       }
     }
-  },
-
-  answeredAt: {
-    type: Date,
-    autoValue() {
-      return new Date();
-    }
-  },
+  }
 }));
+
+Questions.before.update(function(userId, doc) {
+  doc.answeredAt = new Date();
+});
