@@ -1,3 +1,6 @@
 Router.route('/questions', {
-  name: 'Questions'
+  name: 'Questions',
+  waitOn() {
+    return Meteor.subscribe('questions');
+  }
 });

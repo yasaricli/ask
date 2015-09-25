@@ -1,1 +1,25 @@
-<template name="questions"></template>
+<template name="questions">
+  <div class="head-label mb0">Settings</div>
+  {{ > list doc=currentUser.questions }}
+</template>
+
+<template name="list">
+  <ul class="questions">
+    {{# each doc }}
+      <li>
+        <div class="question">{{ question }}</div>
+        {{# if answered }}
+          <div class="answer">{{ answer }}</div>
+          <div class="time">{{ livestamp answeredDate }}</div>
+        {{ else }}
+          <div class="time mt5">{{ livestamp createdDate }}</div>
+          <div class="options">
+            <a href="/dsdksdjsk/questions/132172658186/reply">Yanıtla</a>
+          </div>
+        {{/if}}
+      </li>
+    {{ else }}
+      <li class="yet">{{ _ 'answer-yet' }}</li>
+    {{/each}}
+  </ul>
+</template>

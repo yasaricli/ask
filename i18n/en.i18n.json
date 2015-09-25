@@ -27,5 +27,6 @@
   "page-notfound-text": "Requested page was not found.",
   "page-notfound-link-text": "Return to main page",
   "settings-updated-message": "Your profile has been updated",
-  "ask-me": "Ask me a question"
+  "ask-me": "Ask me a question",
+  "answer-yet": "You haven't answered any questions yet."
 }

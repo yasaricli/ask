@@ -26,5 +26,6 @@
   "page-notfound-text": "Requested page was not found.",
   "page-notfound-link-text": "Return to main page",
   "settings-updated-message": "Profilin güncellendi",
-  "ask-me": "Bana bir soru sor"
+  "ask-me": "Bana bir soru sor",
+  "answer-yet": "Henüz herhangi bir soruyu yanıtlamadın."
 }

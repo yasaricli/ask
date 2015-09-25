@@ -1,4 +1,6 @@
-let HELPERS = {
+const root = this;
+
+root.HELPERS = {
   isAuthenticated() {
     return !_.isNull(Meteor.userId());
   },

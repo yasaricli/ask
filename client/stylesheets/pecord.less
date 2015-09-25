@@ -39,6 +39,14 @@ body {
   }
 }
 
+.mb0 {
+  margin-bottom:0px!important;
+}
+
+.mt5 {
+  margin-top:5px!important;
+}
+
 .container {
   display: block;
   overflow: hidden;
@@ -763,6 +771,64 @@ body {
 
       button {
         float:right;
+      }
+    }
+  }
+}
+
+.questions {
+  list-style: none;
+  padding:0px;
+  margin:0px;
+
+  .yet {
+    width: 685px;
+    margin: 0 auto;
+    padding: 10px 0;
+    border: 0;
+    overflow: hidden;
+  }
+
+  li:not(.yet) {
+    display: block;
+    width: 685px;
+    margin: 0 auto;
+    padding: 11px 0;
+    border-style: none;
+    border-bottom: 1px solid #EEE;
+    overflow: hidden;
+
+    .question {
+      font-weight: bold;
+      width: 95%;
+      margin: 0;
+      padding: 0;
+      line-height: 18px;
+      word-wrap: break-word;
+    }
+
+    .answer {
+      width: 100%;
+      clear: both;
+      padding: 7px 0 6px;
+      margin: 0;
+      line-height: 18px;
+      word-wrap: break-word;
+    }
+
+    .time {
+      color: gray;
+      text-decoration: none;
+      white-space: nowrap;
+      font-size: 11px;
+      line-height: 12px;
+      padding: 0px 0 6px;
+    }
+
+    .options {
+      a {
+        &:extend(.link-blue all);
+        font-size: 12px;
       }
     }
   }
