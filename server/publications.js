@@ -17,11 +17,18 @@ Meteor.publishComposite('profile', (username) => {
   }
 });
 
-
 Meteor.publishComposite('questions', () => {
   return {
     find() {
       return Questions.find({ answerUserId: this.userId });
+    }
+  }
+});
+
+Meteor.publishComposite('notifications', () => {
+  return {
+    find() {
+      return Notifications.find({ userId: this.userId });
     }
   }
 });
