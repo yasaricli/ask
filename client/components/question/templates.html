@@ -14,7 +14,7 @@
         {{ else }}
           <div class="time mt5">{{ livestamp createdDate }}</div>
           <div class="options">
-            <a href="/dsdksdjsk/questions/132172658186/reply">Yanıtla</a>
+            <a href="{{ pathFor route='Answer' }}">{{ _ 'answer' }}</a>
           </div>
         {{/if}}
       </li>
@@ -22,4 +22,23 @@
       <li class="yet">{{ _ 'answer-yet' }}</li>
     {{/each}}
   </ul>
+</template>
+
+<template name="askMeForm">
+  <form id="AskMeForm" class="{{ type }}">
+    <textarea id="Ask"></textarea>
+    <div class="ask-options">
+      <div class="counter">300</div>
+      <button class="btn blue">{{ _ type }}</button>
+    </div>
+  </form>
+</template>
+
+<template name="Answer">
+  <div class="head-label mb0">{{ _ 'questions' }}</div>
+  <div class="mt10">
+    <div class="bold">{{ question.question }}</div>
+    <div class="time mt5">{{ livestamp createdDate }}</div>
+  </div>
+  {{ > askMeForm type="answer" }}
 </template>

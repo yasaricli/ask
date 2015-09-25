@@ -44,7 +44,7 @@
     {{# if isAuthenticated }}
       <div class="header-menu">
         <a href="{{ pathFor route='Wall' }}" class="{{ isActiveRoute 'Wall' }}">{{ _ 'home' }}</a>
-        <a href="{{ pathFor route='Questions' }}" class="{{ isActiveRoute 'Questions' }}">{{ _ 'questions' }} <span>(1)</span></a>
+        <a href="{{ pathFor route='Questions' }}" class="{{ isActiveRoute 'Questions' }}">{{ _ 'questions' }}</a>
         <a href="{{ pathFor route='Profile' username=currentUser.username }}" class="{{ isActiveRoute 'Profile' }}">{{ _ 'profile' }}</a>
         <a href="{{ pathFor route='Friends' }}" class="{{ isActiveRoute 'Friends' }}">{{ _ 'friends' }}</a>
         <a href="{{ pathFor route='Search' }}" class="{{ isActiveRoute 'Search' }}">{{ _ 'search' }}</a>

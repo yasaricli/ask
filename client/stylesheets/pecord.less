@@ -47,6 +47,23 @@ body {
   margin-top:5px!important;
 }
 
+.mt10 {
+  margin-top:10px!important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.time {
+  color: gray;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 11px;
+  line-height: 12px;
+  padding: 0px 0 6px;
+}
+
 .container {
   display: block;
   overflow: hidden;
@@ -323,10 +340,13 @@ body {
 #PecordSettings,
 #PecordFriends,
 #PecordSearch,
-#PecordatChangePwd {
+#PecordatChangePwd,
+#PecordAnswer {
   #Surface();
 
   .wrapper {
+    position:relative;
+    z-index:1;
     .container { }
   }
 
@@ -720,61 +740,62 @@ body {
     border-bottom: 1px solid #EEE;
     overflow: hidden;
   }
+}
 
-  #AskMeForm {
-    textarea {
-      width: 673px;
-      max-width: 673px;
-      padding: 5px;
-      border: solid 1px #CCC;
-      margin-top:5px;
-      font-family: Arial,Helvetica,sans-serif;
-      font-size: 14px;
-      text-align: left;
-      line-height: 18px;
-      color: #000;
-      overflow: auto;
-      -moz-border-radius: 5px 5px 0 0;
-      border-radius: 5px 5px 0 0;
-      outline: 0;
-      resize:none;
+#AskMeForm {
+  textarea {
+    width: 673px;
+    max-width: 673px;
+    padding: 5px;
+    border: solid 1px #CCC;
+    margin-top:5px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    text-align: left;
+    line-height: 18px;
+    color: #000;
+    overflow: auto;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    outline: 0;
+    resize:none;
+  }
+
+  .ask-options {
+    &:extend(.clearfix all);
+
+    overflow: hidden;
+    width: 675px;
+    padding: 4px;
+    margin-top: -3px;
+    border-top: 0;
+    border-bottom: solid 1px #CCC;
+    border-left: solid 1px #CCC;
+    border-right: solid 1px #CCC;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    background-color: #EEE;
+
+    .counter {
+      width: auto;
+      height: 26px;
+      display: block;
+      float: left;
+      color: #999;
+      margin: 0;
+      padding: 0 0 0 5px;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 26px;
     }
 
-    .ask-options {
-      &:extend(.clearfix all);
-
-      overflow: hidden;
-      width: 675px;
-      padding: 4px;
-      margin-top: -3px;
-      border-top: 0;
-      border-bottom: solid 1px #CCC;
-      border-left: solid 1px #CCC;
-      border-right: solid 1px #CCC;
-      -moz-border-radius: 0 0 5px 5px;
-      -webkit-border-radius: 0 0 5px 5px;
-      border-radius: 0 0 5px 5px;
-      background-color: #EEE;
-
-      .counter {
-        width: auto;
-        height: 26px;
-        display: block;
-        float: left;
-        color: #999;
-        margin: 0;
-        padding: 0 0 0 5px;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 26px;
-      }
-
-      button {
-        float:right;
-      }
+    button {
+      float:right;
     }
   }
 }
+
 
 .questions {
   list-style: none;
@@ -814,15 +835,6 @@ body {
       margin: 0;
       line-height: 18px;
       word-wrap: break-word;
-    }
-
-    .time {
-      color: gray;
-      text-decoration: none;
-      white-space: nowrap;
-      font-size: 11px;
-      line-height: 12px;
-      padding: 0px 0 6px;
     }
 
     .options {

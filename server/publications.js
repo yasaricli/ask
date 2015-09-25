@@ -25,6 +25,14 @@ Meteor.publishComposite('questions', () => {
   }
 });
 
+Meteor.publishComposite('question', (_id) => {
+  return {
+    find() {
+      return Questions.find({ _id: _id });
+    }
+  }
+});
+
 Meteor.publishComposite('notifications', () => {
   return {
     find() {
