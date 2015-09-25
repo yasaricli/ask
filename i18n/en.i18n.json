@@ -30,5 +30,7 @@
   "settings-updated-message": "Your profile has been updated",
   "ask-me": "Ask me a question",
   "answer-yet": "You haven't answered any questions yet.",
-  "questions-yet": "This is the link to your profile. Share it with your friends to get more questions."
+  "questions-yet": "This is the link to your profile. Share it with your friends to get more questions.",
+  "send-question": "Your question has been sent.",
+  "reload-ask": "Ask another one"
 }

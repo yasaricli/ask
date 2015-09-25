@@ -1,5 +1,7 @@
 Template.askMeForm.events({
-  'click .ask'() {
+  'click .reload'(event) {
+    event.preventDefault();
+
     Session.set('onCreatedQuestion', false);
   },
 

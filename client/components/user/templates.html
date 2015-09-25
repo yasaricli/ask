@@ -6,7 +6,7 @@
     <div class="info">
       <div class="statistics">
         <a href="{{ pathFor route='Profile' username=user.username }}">
-          <span class="digit">0</span>
+          <span class="digit">{{ user.answers.count }}</span>
           <span class="label">{{ _ 'answers' }}</span>
         </a>
         <div class="seperator"></div>

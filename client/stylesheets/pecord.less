@@ -87,7 +87,7 @@ body {
   background-position: top left;
 
   .container {
-    &:extend(.clearfix all);
+    .clearfix();
 
     .left {
       width:250px;
@@ -113,7 +113,9 @@ body {
       }
     }
 
-    .right:extend(.clearfix all) {
+    .right {
+      .clearfix();
+
       margin: 6px 0 0 10px;
       float:right;
 
@@ -696,7 +698,7 @@ body {
   }
 
   .head {
-    &:extend(.clearfix all);
+    .clearfix();
 
     position: relative;
     overflow: visible;
@@ -714,7 +716,7 @@ body {
 
 
 #settingsForm {
-  &:extend(.at-form all);
+  .at-form();
 }
 
 
@@ -762,7 +764,7 @@ body {
   }
 
   .ask-options {
-    &:extend(.clearfix all);
+    .clearfix();
 
     overflow: hidden;
     width: 675px;
@@ -857,7 +859,7 @@ body {
     }
   }
 
-  li:not(.yet, .box) {
+  li:not(.yet):not(.yet) {
     display: block;
     width: 685px;
     margin: 0 auto;
@@ -886,7 +888,7 @@ body {
 
     .options {
       a {
-        &:extend(.link-blue all);
+        .link-blue();
         font-size: 12px;
       }
     }

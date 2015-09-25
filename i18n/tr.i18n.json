@@ -29,5 +29,7 @@
   "settings-updated-message": "Profilin güncellendi",
   "ask-me": "Bana bir soru sor",
   "answer-yet": "Henüz herhangi bir soruyu yanıtlamadın.",
-  "questions-yet": "İşte profilinin bağlantısı. Daha çok soru almak için bunu arkadaşlarınla paylaş."
+  "questions-yet": "İşte profilinin bağlantısı. Daha çok soru almak için bunu arkadaşlarınla paylaş.",
+  "send-question": "Hazırladığın soru gönderildi.",
+  "reload-ask": "Başka bir soru sor"
 }

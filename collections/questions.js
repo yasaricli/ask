@@ -15,20 +15,22 @@ Questions.attachSchema(new SimpleSchema({
   },
 
   question: {
-    type: String
+    type: String,
+    max: 300
   },
 
   // XXX: Object list answers ?
   answer: {
     type: String,
-    optional: true
+    optional: true,
+    max: 300
   },
 
   answered: {
     type: Boolean,
     autoValue() {
       if (this.isInsert) {
-        return false
+        return false;
       }
     }
   },
@@ -41,9 +43,14 @@ Questions.attachSchema(new SimpleSchema({
         return new Date();
       }
     }
+  },
+
+  answeredAt: {
+    type: Date,
+    optional: true
   }
 }));
 
-Questions.before.update(function(userId, doc) {
-  doc.answeredAt = new Date();
+Questions.before.update(function(userId, doc, fieldNames, modifier, options) {
+  modifier.$set.answeredAt = new Date();
 });
