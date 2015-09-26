@@ -953,3 +953,115 @@ body {
     }
   }
 }
+
+.search {
+  margin-top:10px;
+
+  .searchbox {
+    position:relative;
+    width: 605px;
+    height: auto;
+    padding: 10px 15px 11px 35px;
+    margin: 15px auto 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    background: #fcfcfc;
+    background: -moz-linear-gradient(top,#fcfcfc 0,#f5f5f5 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#fcfcfc),color-stop(100%,#f5f5f5));
+    background: -webkit-linear-gradient(top,#fcfcfc 0,#f5f5f5 100%);
+    background: -o-linear-gradient(top,#fcfcfc 0,#f5f5f5 100%);
+    background: -ms-linear-gradient(top,#fcfcfc 0,#f5f5f5 100%);
+    background: linear-gradient(to bottom,#fcfcfc 0,#f5f5f5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc',endColorstr='#f5f5f5',GradientType=0);
+
+    input {
+      padding-right: 65px;
+      width: 540px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 18px;
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      font-family: Arial,Helvetica,sans-serif;
+      line-height: 18px;
+      border: 0;
+      outline: none 0;
+      background: 0;
+    }
+
+    .fa-search {
+      color:#ccc;
+      position: absolute;
+      left: 11px;
+      font-size: 16px;
+    }
+  }
+
+  .no-results, .loading {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .users {
+    list-style:none;
+    padding:0px;
+
+    li {
+      width: 685px;
+      margin: 0 auto;
+      padding: 11px 0;
+      border-style: none;
+      border-bottom: 1px solid #EEE;
+      overflow: hidden;
+
+      .user {
+        display:block;
+        position: relative;
+        float: left;
+        top: 2px;
+
+        .avatar-normal {
+          width:75px;
+          height:75px;
+        }
+      }
+
+      .options {
+        float:left;
+        margin:4px 0 0 15px;
+        font-size: 13px;
+
+        .name {
+          a {
+            position:relative;
+            text-decoration: none;
+            font-weight: bold;
+            color: #000;
+
+            &:hover {
+              color: #3081a3;
+              text-decoration: underline;
+            }
+          }
+        }
+        .username {
+          display: inline;
+          font-weight: normal;
+          color: #777;
+        }
+
+        .bio {
+          font-style: italic;
+          color: #777;
+        }
+
+        .website {
+          .link-blue();
+          font-style: italic;
+        }
+      }
+    }
+  }
+}

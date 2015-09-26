@@ -60,8 +60,12 @@ livedata@1.0.15
 localstorage@1.0.5
 logging@1.0.8
 matb33:collection-hooks@0.8.0
+matteodem:easy-search@1.6.4
 meteor@1.1.7
 meteor-base@1.0.1
+meteor-platform@1.2.3
+meteorhacks:aggregate@1.2.1
+meteorhacks:collection-utils@1.2.0
 meteorhacks:inject-initial@1.0.2
 meteorspark:util@0.2.0
 minifiers@1.1.7
@@ -73,6 +77,7 @@ mobile-status-bar@1.0.6
 momentjs:moment@2.10.6
 mongo@1.1.1
 mongo-id@1.0.1
+mongo-livedata@1.0.9
 npm-bcrypt@0.7.8_2
 npm-mongo@1.4.39_1
 observe-sequence@1.0.7

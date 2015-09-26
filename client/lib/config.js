@@ -19,6 +19,7 @@ Router.configure({
 Avatar.setOptions({
   gravatarDefault: "retro",
   imageSizes: {
+    'normal': 75,
     'big': 160,
     'low-small': 24
   }

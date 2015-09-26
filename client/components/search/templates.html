@@ -1,1 +1,41 @@
-<template name="search"></template>
+<template name="search">
+  <div class="head-label mb0">{{ _ 'search' }}</div>
+  <div class="search">
+    <div class="searchbox">
+      <i class="fa fa-search"></i>
+      {{> esInput index="users" placeholder="Search pecord.com" }}
+    </div>
+
+    {{# ifEsIsSearching index="users" }}
+      <div class="loading">Loading...</div>
+    {{ else }}
+      <ul class="users">
+        {{# esEach index="users"}}
+          <li>
+            <a href="{{ pathFor route='Profile' username=username }}" class="user">
+              {{ > avatar user=this size='normal' }}
+            </a>
+            <div class="options">
+              <div class="name">
+                <a href="{{ pathFor route='Profile' username=username }}">
+                  {{ profile.fullname }}
+                </a>
+                <span class="username">@{{ username }}</span>
+              </div>
+              <div class="bio">{{ profile.bio }}</div>
+              <a href="{{ profile.website }}" class="website">
+                {{ profile.website }}
+              </a>
+            </div>
+          </li>
+        {{/esEach}}
+      </ul>
+
+      {{> esLoadMoreButton index="users" }}
+    {{/ifEsIsSearching}}
+
+    {{# ifEsHasNoResults index="users" }}
+      <div class="no-results">{{ _ 'user-not-found' }}</div>
+    {{/ifEsHasNoResults}}
+  </div>
+</template>
