@@ -7,28 +7,35 @@
   <ul class="questions">
     {{# each doc }}
       <li>
-        <div class="question">
-          {{ question }}
-          {{# unless isCurrentUser questionUser }}
-            <a href="{{ pathFor route='Profile' username=questionUser.username }}" class="user">
-              {{ questionUser.username }}
-            </a>
-          {{/unless}}
-        </div>
-        {{# if answered }}
-          <div class="answer">{{ answer }}</div>
-          <div class="time">{{ livestamp answeredAt }}</div>
-        {{ else }}
-          <div class="time mt5">{{ livestamp createdDate }}</div>
-          <div class="options">
-            <a href="{{ pathFor route='Answer' }}">{{ _ 'answer' }}</a>
+        {{# if ../show_avatar }}
+          <div class="profile">
+            {{> avatar user=answerUser }}
           </div>
         {{/if}}
-        {{# unless avatar }}
-          {{# if isCurrentUser answerUserId }}
-            <i class="fa fa-times delete"></i>
+        <div class="question-container">
+          <div class="question">
+            {{ question }}
+            {{# unless isCurrentUser questionUser }}
+              <a href="{{ pathFor route='Profile' username=questionUser.username }}" class="user">
+                {{ questionUser.username }}
+              </a>
+            {{/unless}}
+          </div>
+          {{# if answered }}
+            <div class="answer">{{ answer }}</div>
+            <div class="time">{{ livestamp answeredAt }}</div>
+          {{ else }}
+            <div class="time mt5">{{ livestamp createdDate }}</div>
+            <div class="options">
+              <a href="{{ pathFor route='Answer' }}">{{ _ 'answer' }}</a>
+            </div>
           {{/if}}
-        {{/unless}}
+          {{# unless avatar }}
+            {{# if isCurrentUser answerUserId }}
+              <i class="fa fa-times delete"></i>
+            {{/if}}
+          {{/unless}}
+        </div>
       </li>
     {{ else }}
       {{# if emptyBox }}
@@ -71,5 +78,5 @@
 
 <template name="answers">
   <div class="head-label mb0">{{ _ 'answers' }}</div>
-  {{ > list doc=currentUser.answers avatar=true delete=true }}
+  {{ > list doc=currentUser.answers show_avatar=true delete=true }}
 </template>

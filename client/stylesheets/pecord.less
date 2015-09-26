@@ -854,7 +854,7 @@ body {
     position: relative;
     overflow: hidden;
     width: 685px;
-    margin: -4px auto 10px auto;
+    margin: -4px auto 10px auto!important;
     padding: 0;
     border-radius: 5px;
     -moz-border-radius: 5px;
@@ -905,18 +905,28 @@ body {
       }
     }
 
-    .question {
-      font-weight: bold;
-      width: 95%;
-      margin: 0;
-      padding: 0;
-      line-height: 18px;
-      word-wrap: break-word;
+    .profile {
+      float:left;
+      margin-right:10px;
 
-      .user {
-        .link-blue();
-        font-size: 11px;
-        line-height: 12px;
+      .avatar {}
+    }
+
+    .question-container {
+      float:left;
+
+      .question {
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        line-height: 18px;
+        word-wrap: break-word;
+
+        .user {
+          .link-blue();
+          font-size: 11px;
+          line-height: 12px;
+        }
       }
     }
 

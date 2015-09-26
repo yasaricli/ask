@@ -54,6 +54,9 @@ Questions.attachSchema(new SimpleSchema({
 Questions.helpers({
   questionUser() {
     return Users.findOne(this.questionUserId);
+  },
+  answerUser() {
+    return Users.findOne(this.answerUserId);
   }
 });
 
