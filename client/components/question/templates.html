@@ -9,7 +9,9 @@
       <li>
         {{# if ../show_avatar }}
           <div class="profile">
-            {{> avatar user=answerUser }}
+            <a href="{{ pathFor route='Profile' username=answerUser.username }}">
+              {{> avatar user=answerUser }}
+            </a>
           </div>
         {{/if}}
         <div class="question-container">
