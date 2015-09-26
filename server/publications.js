@@ -55,6 +55,9 @@ Meteor.publishComposite('answers', () => {
   return {
     find() {
       return Questions.find({
+        answerUserId: {
+          $ne: this.userId
+        },
         questionUserId: this.userId,
         answered: true
       });
