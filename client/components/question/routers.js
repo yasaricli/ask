@@ -5,6 +5,13 @@ Router.route('/questions', {
   }
 });
 
+Router.route('/answers', {
+  name: 'Answers',
+  waitOn() {
+    return Meteor.subscribe('answers');
+  }
+});
+
 Router.route('/answer/:_id', {
   name: 'Answer',
   waitOn() {

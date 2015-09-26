@@ -24,10 +24,11 @@
             <a href="{{ pathFor route='Answer' }}">{{ _ 'answer' }}</a>
           </div>
         {{/if}}
-
-        {{# if isCurrentUser answerUserId }}
-          <i class="fa fa-times delete"></i>
-        {{/if}}
+        {{# unless avatar }}
+          {{# if isCurrentUser answerUserId }}
+            <i class="fa fa-times delete"></i>
+          {{/if}}
+        {{/unless}}
       </li>
     {{ else }}
       {{# if emptyBox }}
@@ -66,4 +67,9 @@
     <div class="time mt5">{{ livestamp createdDate }}</div>
   </div>
   {{ > askMeForm type="answer" question=question }}
+</template>
+
+<template name="answers">
+  <div class="head-label mb0">{{ _ 'answers' }}</div>
+  {{ > list doc=currentUser.answers avatar=true delete=true }}
 </template>

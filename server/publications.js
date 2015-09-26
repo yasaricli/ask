@@ -51,6 +51,24 @@ Meteor.publishComposite('questions', () => {
   }
 });
 
+Meteor.publishComposite('answers', () => {
+  return {
+    find() {
+      return Questions.find({
+        questionUserId: this.userId,
+        answered: true
+      });
+    },
+    children: [
+      {
+        find(question) {
+          return Users.find({ _id: question.answerUserId }, userFields);
+        }
+      }
+    ]
+  }
+});
+
 Meteor.publishComposite('question', (_id) => {
   return {
     find() {

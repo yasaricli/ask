@@ -25,7 +25,7 @@ Avatar.setOptions({
 });
 
 Router.plugin('ensureSignedIn', {
-  only: ['Wall', 'Questions', 'Friends', 'Search', 'Settings']
+  only: ['Wall', 'Questions', 'Answers', 'Search', 'Settings']
 });
 
 AccountsTemplates.configure({

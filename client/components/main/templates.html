@@ -34,8 +34,11 @@
             <span>{{ count 'Question' }}</span>
           {{/if}}
         </a>
-        <a href="#">
+        <a href="{{ pathFor route='Answers' }}">
           <i class="fa fa-reply"></i>
+          {{# if has 'Answered' }}
+            <span>{{ count 'Answered' }}</span>
+          {{/if}}
         </a>
       </div>
     {{/if}}

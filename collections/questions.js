@@ -60,12 +60,15 @@ Questions.helpers({
 if (Meteor.isServer) {
   Questions.after.insert(function(userId, doc) {
 
-    // new Notification
-    Notifications.insert({
-      docId: doc._id,
-      userId: doc.answerUserId,
-      type: 'Question'
-    });
+    if (!_.isEqual(doc.answerUserId, userId)) {
+
+      // new Notification
+      Notifications.insert({
+        docId: doc._id,
+        userId: doc.answerUserId,
+        type: 'Question'
+      });
+    }
   });
 
   Questions.before.update(function(userId, doc, fieldNames, modifier, options) {
@@ -73,6 +76,16 @@ if (Meteor.isServer) {
     // is answered boolean has $set Object then
     if (_.has(modifier.$set, 'answered')) {
       modifier.$set.answeredAt = new Date();
+
+      if (!_.isEqual(doc.questionUserId, userId)) {
+
+        // new Notification
+        Notifications.insert({
+          docId: doc._id,
+          userId: doc.questionUserId,
+          type: 'Answered'
+        });
+      }
     }
   });
 }

@@ -5,6 +5,13 @@ Template.questions.onRendered(() => {
   user.seeNotifications('Question');
 });
 
+Template.answers.onRendered(() => {
+  const user = Meteor.user();
+
+  // see Question
+  user.seeNotifications('Answered');
+});
+
 Template.askMeForm.onRendered(() => {
   this.$('textarea').autosize();
 
