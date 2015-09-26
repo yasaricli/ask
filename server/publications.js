@@ -36,7 +36,10 @@ Meteor.publishComposite('question', (_id) => {
 Meteor.publishComposite('notifications', () => {
   return {
     find() {
-      return Notifications.find({ userId: this.userId });
+      return Notifications.find({
+        userId: this.userId,
+        see: false
+      });
     }
   }
 });

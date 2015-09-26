@@ -51,6 +51,23 @@ Questions.attachSchema(new SimpleSchema({
   }
 }));
 
-Questions.before.update(function(userId, doc, fieldNames, modifier, options) {
-  modifier.$set.answeredAt = new Date();
-});
+
+if (Meteor.isServer) {
+  Questions.after.insert(function(userId, doc) {
+
+    // new Notification
+    Notifications.insert({
+      docId: doc._id,
+      userId: doc.answerUserId,
+      type: 'Question'
+    });
+  });
+
+  Questions.before.update(function(userId, doc, fieldNames, modifier, options) {
+
+    // is answered boolean has $set Object then
+    if (_.has(modifier.$set, 'answered')) {
+      modifier.$set.answeredAt = new Date();
+    }
+  });
+}

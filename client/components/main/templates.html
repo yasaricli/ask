@@ -27,15 +27,15 @@
       <div class="header-features">
         <a href="#">
           <i class="fa fa-heart"></i>
-          <span>0</span>
         </a>
         <a href="{{ pathFor route='Questions' }}">
           <i class="fa fa-question"></i>
-          <span>0</span>
+          {{# if has 'Question' }}
+            <span>{{ count 'Question' }}</span>
+          {{/if}}
         </a>
         <a href="#">
           <i class="fa fa-reply"></i>
-          <span>0</span>
         </a>
       </div>
     {{/if}}
@@ -68,8 +68,8 @@
   </div>
 </template>
 
-
 <template name="loading"></template>
+
 <template name="notFound">
   <div id="NotFound">
     <p>{{ _ 'page-notfound-text' }}</p>

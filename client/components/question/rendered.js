@@ -1,3 +1,10 @@
+Template.questions.onRendered(() => {
+  const user = Meteor.user();
+
+  // see Question
+  user.notificationsSeeIt('Question');
+});
+
 Template.askMeForm.onRendered(() => {
   this.$('textarea').autosize();
 
