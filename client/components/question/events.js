@@ -40,3 +40,20 @@ Template.askMeForm.events({
     }
   }
 });
+
+Template.list.events({
+  'click .delete'(event, template) {
+    if (template.data.delete) {
+
+      // remove question
+      return Questions.remove(this._id);
+    }
+
+    // update answered false
+    Questions.update(this._id, {
+      $set: {
+        answered: false
+      }
+    });
+  }
+});

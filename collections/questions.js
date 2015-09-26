@@ -51,6 +51,11 @@ Questions.attachSchema(new SimpleSchema({
   }
 }));
 
+Questions.helpers({
+  questionUser() {
+    return Users.findOne(this.questionUserId);
+  }
+});
 
 if (Meteor.isServer) {
   Questions.after.insert(function(userId, doc) {

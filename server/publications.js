@@ -1,7 +1,16 @@
+const userFields = {
+  fields: {
+    username: 1,
+    profile: 1,
+    emails: 1,
+    status: 1
+  }
+};
+
 Meteor.publishComposite('profile', (username) => {
   return {
     find() {
-      return Users.find({ username: username });
+      return Users.find({ username: username }, userFields);
     },
 
     children: [
@@ -11,7 +20,14 @@ Meteor.publishComposite('profile', (username) => {
             answerUserId: user._id,
             answered: true
           });
-        }
+        },
+        children: [
+          {
+            find(question) {
+              return Users.find({ _id: question.questionUserId }, userFields);
+            }
+          }
+        ]
       }
     ]
   }
@@ -20,8 +36,18 @@ Meteor.publishComposite('profile', (username) => {
 Meteor.publishComposite('questions', () => {
   return {
     find() {
-      return Questions.find({ answerUserId: this.userId });
-    }
+      return Questions.find({
+        answerUserId: this.userId,
+        answered: false
+      });
+    },
+    children: [
+      {
+        find(question) {
+          return Users.find({ _id: question.questionUserId }, userFields);
+        }
+      }
+    ]
   }
 });
 
