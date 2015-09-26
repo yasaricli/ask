@@ -2,7 +2,7 @@ Template.questions.onRendered(() => {
   const user = Meteor.user();
 
   // see Question
-  user.notificationsSeeIt('Question');
+  user.seeNotifications('Question');
 });
 
 Template.askMeForm.onRendered(() => {

@@ -32,7 +32,7 @@ Notifications.attachSchema(new SimpleSchema({
 }));
 
 Notifications.helpers({
-  see() {
+  seed() {
     Notifications.update(this._id, {
       $set: {
         see: true
