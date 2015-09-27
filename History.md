@@ -1,4 +1,8 @@
 # NEXT — v0.2
+* Follow users
+* Like a answers
+* Ask counter `user Settings default 300`
+* Ask me text `Edit Settings default Ask me a question`
 
 # v0.1
 
