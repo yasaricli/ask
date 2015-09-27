@@ -12,5 +12,6 @@
 * Settings Edit
 * Search Users
 * Profile page 
+* User Status Profile online and offline
 * Current user Questions `delete, re Answers`
 * Notifications `new Question and new answer`
