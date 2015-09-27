@@ -1,11 +1,9 @@
 Users = Meteor.users;
 
-
 // name is the field of the documents to search over
 Users.initEasySearch(['username', 'profile.fullname'], {
   use: 'mongo-db'
 });
-
 
 Users.helpers({
   answers() {

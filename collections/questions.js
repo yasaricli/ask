@@ -80,14 +80,19 @@ if (Meteor.isServer) {
     if (_.has(modifier.$set, 'answered')) {
       modifier.$set.answeredAt = new Date();
 
+      // if not question user is userId then
       if (!_.isEqual(doc.questionUserId, userId)) {
 
-        // new Notification
-        Notifications.insert({
-          docId: doc._id,
-          userId: doc.questionUserId,
-          type: 'Answered'
-        });
+        // if not answered then 
+        if (_.isEqual(doc.answered, false)) {
+
+          // new Notification
+          Notifications.insert({
+            docId: doc._id,
+            userId: doc.questionUserId,
+            type: 'Answered'
+          });
+        }
       }
     }
   });
