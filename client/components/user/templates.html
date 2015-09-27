@@ -72,7 +72,7 @@
 </template>
 
 <template name="settings">
-  <div class="head-label">Settings</div>
+  <div class="head-label">{{ _ 'settings' }}</div>
   {{# if session 'settingsOnSaved' }}
     <div class="head-success">
       <i class="fa fa-check-circle"></i> {{ session 'settingsOnSaved' }}

@@ -90,3 +90,20 @@ Meteor.publishComposite('notifications', () => {
     }
   }
 });
+
+Meteor.publishComposite('wall', () => {
+  return {
+    find() {
+      return Questions.find({
+        answered: true
+      });
+    },
+    children: [
+      {
+        find(question) {
+          return Users.find({ _id: question.answerUserId }, userFields);
+        }
+      }
+    ]
+  }
+});

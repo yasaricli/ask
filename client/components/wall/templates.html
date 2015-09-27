@@ -1,1 +1,28 @@
-<template name="wall"></template>
+<template name="wall">
+  <div class="head-label">{{ _ 'answers' }}</div>
+  <ul class="questions">
+    {{# each questions }}
+      <li>
+        <div class="profile">
+          <a href="{{ pathFor route='Profile' username=answerUser.username }}">
+            {{> avatar user=answerUser size='normal' }}
+          </a>
+        </div>
+        <div class="question-container">
+          <div class="question">
+            {{ question }}
+          </div>
+          <div class="answer">{{ answer }}</div>
+          <div class="time">
+            {{ livestamp answeredAt }}
+            <a href="{{ pathFor route='Profile' username=answerUser.username }}" class="user">
+              {{ answerUser.username }}
+            </a>
+          </div>
+        </div>
+      </li>
+    {{ else }}
+      <li class="yet">{{ _ 'answer-yet' }}</li>
+    {{/each}}
+  </ul>
+</template>
