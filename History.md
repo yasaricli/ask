@@ -8,5 +8,5 @@
 * Settings Edit
 * Search Users
 * Profile page 
-* Current user Questions ”delete, re Answers”
-* Notifications ”new Question and new answer”
+* Current user Questions `delete, re Answers`
+* Notifications `new Question and new answer`
