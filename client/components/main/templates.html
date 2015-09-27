@@ -26,15 +26,15 @@
     {{# if isAuthenticated }}
       <div class="header-features">
         <a href="#">
-          <i class="fa fa-heart"></i>
+          <i class="fa fa-users"></i>
         </a>
-        <a href="{{ pathFor route='Questions' }}">
+        <a href="{{ pathFor route='Questions' }}" class="{{# if has 'Question' }}active{{/if}}">
           <i class="fa fa-question"></i>
           {{# if has 'Question' }}
             <span>{{ count 'Question' }}</span>
           {{/if}}
         </a>
-        <a href="{{ pathFor route='Answers' }}">
+        <a href="{{ pathFor route='Answers' }}" class="{{# if has 'Answered' }}active{{/if}}">
           <i class="fa fa-reply"></i>
           {{# if has 'Answered' }}
             <span>{{ count 'Answered' }}</span>
