@@ -116,4 +116,5 @@ utilities:avatar@0.9.1
 webapp@1.2.2
 webapp-hashing@1.0.5
 yasaricli:slugify@0.0.7
+yasaricli:textcounter@0.0.1
 zimme:active-route@2.3.2

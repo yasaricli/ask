@@ -15,6 +15,12 @@ Template.answers.onRendered(() => {
 Template.askMeForm.onRendered(() => {
   this.$('textarea').autosize();
 
+  // counter
+  this.$('.counter').textCounter({
+    target: 'textarea',
+    count: 300
+  });
+
   // created question then reset
   Session.set('onCreatedQuestion', false);
 });
