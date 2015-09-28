@@ -24,6 +24,11 @@ root.SCHEMAS = {
       label: 'Full Name',
       max: 50
     },
+    askme: {
+      type: String,
+      label: 'Page Headline',
+      optional: true
+    },
     website: {
       type: String,
       label: 'Website',
