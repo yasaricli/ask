@@ -276,16 +276,7 @@ body {
 
   .footer {
     .container {
-      display: block;
-      margin: 35px auto 5px;
-      padding: 0 0 10px 5px;
-      overflow: hidden;
-      background-color: #FFF;
-      color: #3081a3;
-      font-weight: normal;
-      border-style: none;
-      border-bottom: 1px solid #EEE;
-      text-align: justify;
+      display: none;
     }
   }
 }
@@ -344,16 +335,27 @@ body {
 
   .footer {
     position: relative;
-    height: 80px;
     width: 659px;
     margin: 0 auto;
-    padding: 20px 38px;
-    background-color: #FFF;
-    font-size: 11px;
-    font-family: sans-serif;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px
+
+    .container {
+      .socials {
+        .clearfix();
+        width:100px;
+        margin:auto;
+
+        a {
+          float:left;
+          font-size:30px;
+          color:#FFF;
+          margin-right:10px;
+
+          &:hover {
+            color:#EEE;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -377,7 +379,7 @@ body {
   }
 
   .footer {
-    display:none;
+
   }
 }
 
@@ -1047,6 +1049,7 @@ body {
             }
           }
         }
+
         .username {
           display: inline;
           font-weight: normal;
