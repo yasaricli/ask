@@ -18,5 +18,5 @@ cd pecord
 meteor
 ```
 
-[screenshot]: http://www.pecord.com/images/screenshot.png
+[screenshot]: https://github.com/yasaricli/ask/blob/develop/public/images/screenshot.png
 [site]: http://www.pecord.com
