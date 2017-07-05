@@ -20,7 +20,6 @@ HELPERS = {
   }
 };
 
-
 // REGISTER HELPERS
 _.each(HELPERS, (fn, name) => {
   Blaze.registerHelper(name, fn);

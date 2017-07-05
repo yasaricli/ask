@@ -24,7 +24,6 @@
   "password": "Password",
   "change-password": "Change Password",
 
-
   "page-notfound-text": "Requested page was not found.",
   "page-notfound-link-text": "Return to main page",
   "settings-updated-message": "Your profile has been updated",
@@ -33,5 +32,31 @@
   "questions-yet": "This is the link to your profile. Share it with your friends to get more questions.",
   "send-question": "Your question has been sent.",
   "reload-ask": "Ask another one",
-  "user-not-found": "There are no users that match your search."
+  "user-not-found": "There are no users that match your search.",
+
+  "question-1": "What are the things that you will regret for not doing in your life?",
+  "question-2": "What are you grateful for in life?",
+  "question-3": "What is the greatest scare?",
+  "question-4": "What's your biggest dream?",
+  "question-5": "How much time do you really spend on yourself?",
+  "question-6": "What values ​​have you made in the last year?",
+  "question-7": "What is your most important characteristic that you do not want to lose? Why?",
+  "question-8": "What can you give up in life? Why?",
+  "question-9": "When you say no, what was the last moment you said yes, why did you say no?",
+  "question-10": "What do people around you really think about you?",
+  "question-11": "When was the last time you laughed in your stomach, who was next to you?",
+  "question-12": "Why are you taking the example of yourself? Why?",
+  "question-13": "How important is money to you?",
+  "question-14": "When was the last time you were criticized?",
+  "question-15": "How did you get a positive benefit from this criticism?",
+  "question-16": "How would you describe yourself to someone who does not know you at all?",
+  "question-17": "If you were living the last week of your life, what would you like to do?",
+  "question-18": "Are you happy?",
+  "question-19": "What do you need to be happy?",
+  "question-20": "How many times have you been in love with this day?",
+  "question-21": "What is it that you do not always put off and do not do?",
+  "question-22": "What are the things that keep you from realizing your dreams?",
+  "question-23": "When was the last time someone thanked you, what did you do for that?",
+  "question-24": "How often do you apologize?",
+  "question-25": "What are the promises you gave yourself and did not hold until this day?"
 }
