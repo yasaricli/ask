@@ -17,11 +17,9 @@
         <div class="question-container">
           <div class="question">
             {{ question }}
-            {{# unless isCurrentUser questionUser }}
-              <a href="{{ pathFor route='Profile' username=questionUser.username }}" class="user">
-                {{ questionUser.username }}
-              </a>
-            {{/unless}}
+            <a href="{{ pathFor route='Profile' username=questionUser.username }}" class="user">
+              {{ questionUser.username }}
+            </a>
           </div>
           {{# if answered }}
             <div class="answer">{{ answer }}</div>
