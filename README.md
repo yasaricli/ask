@@ -13,8 +13,8 @@ Prerequisites:
 Now just clone and start the app:
 
 ```sh
-git clone https://github.com/yasaricli/pecord.git
-cd pecord
+git clone https://github.com/yasaricli/ask.git
+cd ask
 meteor
 ```
 
