@@ -1,4 +1,3 @@
 *~
 *.swp
-
-local_settings.json
+node_modules

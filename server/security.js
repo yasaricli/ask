@@ -1,7 +1,3 @@
-/*
- * the doc property to create a method that can be used with Meteor.users
- * to check whether it's the current user's document.
- */
 Security.defineMethod("ifIsCurrentUser", {
   fetch: [],
   transform: null,

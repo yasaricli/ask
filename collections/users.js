@@ -11,6 +11,7 @@ Users.helpers({
       answered: true
     }, { sort: { answeredAt: -1 } });
   },
+
   questions() {
     return Questions.find({
       answered: false

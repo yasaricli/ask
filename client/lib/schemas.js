@@ -1,6 +1,4 @@
-const root = this;
-
-root.SCHEMAS = {
+SCHEMAS = {
   settings: new SimpleSchema({
     username: {
       type: String,

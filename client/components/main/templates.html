@@ -1,5 +1,5 @@
 <head>
-  <title>pecord</title>
+  <title>ask</title>
   <link rel="icon" href="/favicon.png" type="image/png" />
 </head>
 
@@ -23,7 +23,7 @@
 
 <template name="header">
   <div class="left">
-    <a href="{{#if isAuthenticated }}{{ pathFor route='Wall' }}{{ else }}{{ pathFor route='Index' }}{{/if}}" class="logo">pecord</a>
+    <a href="{{#if isAuthenticated }}{{ pathFor route='Wall' }}{{ else }}{{ pathFor route='Index' }}{{/if}}" class="logo">ask</a>
     {{# if isAuthenticated }}
       <div class="header-features">
         <a href="#">
@@ -62,16 +62,7 @@
   </div>
 </template>
 
-<template name="footer">
-  <div class="socials">
-    <a href="https://github.com/yasaricli/pecord" target="_blank">
-      <i class="fa fa-github"></i>
-    </a>
-    <a href="https://twitter.com/hellopecord" target="_blank">
-      <i class="fa fa-twitter"></i>
-    </a>
-  </div>
-</template>
+<template name="footer"></template>
 
 <template name="index">
   <div class="slogan">
@@ -80,7 +71,9 @@
   </div>
 </template>
 
-<template name="loading"></template>
+<template name="loading">
+  loading...
+</template>
 
 <template name="notFound">
   <div id="NotFound">

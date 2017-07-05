@@ -4,12 +4,12 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-insecure
+insecure@1.0.7
 iron:router
-less
+less@2.7.9
 tap:i18n
-accounts-base
-accounts-password
+accounts-base@1.3.0
+accounts-password@1.3.6
 dburles:collection-helpers
 copleykj:livestamp
 fortawesome:fontawesome
@@ -21,21 +21,20 @@ useraccounts:core
 useraccounts:iron-routing
 useraccounts:unstyled
 aldeed:autoform
-standard-minifiers
-meteor-base
-mobile-experience
-mongo
+meteor-base@1.1.0
+mobile-experience@1.0.4
+mongo@1.1.18
 blaze-html-templates
-session
-jquery
-tracker
-logging
-reload
-random
-ejson
+session@1.1.7
+jquery@1.11.10
+tracker@1.1.3
+logging@1.1.17
+reload@1.1.11
+random@1.0.10
+ejson@1.0.13
 spacebars
-check
-ecmascript
+check@1.2.5
+ecmascript@0.8.0
 zimme:active-route
 utilities:avatar
 perak:markdown
@@ -45,4 +44,8 @@ mizzao:user-status
 matteodem:easy-search
 ongoworks:security
 yasaricli:textcounter
-email
+email@1.2.1
+standard-minifier-css
+standard-minifier-js
+shell-server
+dynamic-import

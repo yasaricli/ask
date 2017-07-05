@@ -9,7 +9,7 @@ Router.configure({
     const body = $('body');
 
     // add class
-    body.attr('id', 'Pecord' + this.route.getName());
+    body.attr('id', 'Ask' + this.route.getName());
 
     // and next
     this.next();
